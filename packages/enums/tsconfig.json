@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es2017",
+    "locale": "zh-CN",
+    "lib": [
+      "esnext"
+    ],
+    "newLine": "LF", // 防止windows编译出来crlf的换行符
+    "pretty": true
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es"
+  ]
+}

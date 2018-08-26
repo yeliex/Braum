@@ -1,0 +1,11 @@
+.idea
+node_modules
+.DS_Store
+logs/
+.log
+lib/
+build/
+dist/
+.env.local
+packages/server/config/config.yml
+.lerna_backup

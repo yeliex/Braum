@@ -1,0 +1,34 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "outDir": "dist/lib",
+    "rootDir": "src",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "esnext",
+    "locale": "zh-CN",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "newLine": "LF", // 防止windows编译出来crlf的换行符
+    "pretty": true
+  },
+  "includes": [
+    "scripts/types/externals.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es"
+  ]
+}

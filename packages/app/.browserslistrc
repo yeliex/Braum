@@ -1,0 +1,10 @@
+[production staging]
+ios >= 10
+android >= 5
+chrome >= 47
+safari >= 10
+firefox >= 52
+
+[development]
+last 1 chrome version
+last 1 safari version

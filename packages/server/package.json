@@ -1,0 +1,52 @@
+{
+  "name": "braum-server",
+  "version": "0.1.1",
+  "description": "braum server",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf lib/",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "prebuild:image": "npm run clean",
+    "build:image": "docker build -t braum/braum:v$npm_package_version -t braum/braum:latest ./ ",
+    "prepublish:image": "npm run build:image",
+    "publish:image": "docker push braum/braum",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yeliex",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/debug": "^0.0.30",
+    "@types/glob": "^5.0.35",
+    "@types/http-errors": "^1.6.1",
+    "@types/js-yaml": "^3.11.2",
+    "@types/koa": "^2.0.46",
+    "@types/koa-mount": "^3.0.1",
+    "@types/koa-router": "^7.0.30",
+    "@types/lodash": "^4.14.112",
+    "@types/node": "^10.5.2",
+    "@types/sequelize": "^4.27.24",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@braum/enums": "^0.1.0",
+    "@braum/types": "^0.1.0",
+    "@yeliex/snowflake": "^0.2.0",
+    "bignumber.js": "^7.2.1",
+    "braum": "^0.1.1",
+    "debug": "^3.1.0",
+    "glob": "^7.1.2",
+    "http-errors": "^1.7.0",
+    "js-yaml": "^3.12.0",
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-convert": "^1.2.0",
+    "koa-mount": "^3.0.0",
+    "koa-response": "^2.1.0",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.10",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  }
+}

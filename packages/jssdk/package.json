@@ -1,0 +1,50 @@
+{
+  "name": "braum",
+  "version": "0.1.1",
+  "description": "js sdk for Braum (https://github.com/yeliex/Braum)",
+  "types": "index.d.ts",
+  "browser": "dist/browser.js",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "prebuild": "npm run clean",
+    "start": "tsc -w",
+    "build": "tsc",
+    "publishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeliex/Braum.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "trace",
+    "monitor"
+  ],
+  "author": "yeliex <yeliex@yeliex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeliex/Braum/issues"
+  },
+  "homepage": "https://github.com/yeliex/Braum#readme",
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-compose": "^3.2.2",
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^10.7.0",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@braum/enums": "^0.1.0",
+    "@braum/types": "^0.1.0",
+    "@yeliex/snowflake": "^0.2.0",
+    "cross-fetch": "^2.2.2",
+    "debug": "^3.1.0",
+    "koa-compose": "^4.1.0",
+    "lodash": "^4.17.10"
+  }
+}

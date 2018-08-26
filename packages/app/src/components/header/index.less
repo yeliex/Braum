@@ -1,0 +1,31 @@
+@import "~antd/es/style/themes/default";
+
+.header {
+  background: #FFFFFF;
+  padding: 0 12px;
+
+  :global(.trigger) {
+    font-size: 20px;
+    line-height: 64px;
+  }
+
+  :global(.right) {
+    float: right;
+  }
+
+  :global(.anticon) {
+    cursor: pointer;
+  }
+
+  &, :global(.right) {
+    > *:not(:global(.right)) {
+      padding: 0 12px;
+      display: inline-block;
+      color: @text-color;
+
+      &:hover {
+        color: @link-hover-color;
+      }
+    }
+  }
+}

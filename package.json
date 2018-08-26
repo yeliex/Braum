@@ -1,0 +1,28 @@
+{
+  "name": "project-braum",
+  "version": "0.1.1",
+  "description": "data monitor service for everything, provide html and wechat app",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeliex/Braum.git"
+  },
+  "keywords": [
+    "trace"
+  ],
+  "author": "yeliex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeliex/Braum/issues"
+  },
+  "homepage": "https://github.com/yeliex/Braum#readme",
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  },
+  "dependencies": {
+    "tslint": "^5.11.0"
+  }
+}

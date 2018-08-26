@@ -1,0 +1,34 @@
+{
+  "name": "@braum/plugin",
+  "version": "0.1.0",
+  "description": "plugin core for Braum (https://github.com/yeliex/Braum)",
+  "types": "lib/index.d.ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeliex/Braum.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "trace",
+    "monitor"
+  ],
+  "author": "yeliex <yeliex@yeliex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeliex/Braum/issues"
+  },
+  "homepage": "https://github.com/yeliex/Braum#readme",
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@braum/enums": "^0.1.0"
+  }
+}

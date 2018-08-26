@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db-migration:
+    image: braum/db-migration
+    build:
+      context: db-migration
+      dockerfile: ./Dockerfile
+    restart: 'no'
+    env_file:
+      - .env
+      - .env.local
+  braum:
+    image: braum/braum
+    build:
+      context: packages/server
+      dockerfile: ./Dockerfile
+    restart: always
+    env_file:
+      - .env
+      - .env.local

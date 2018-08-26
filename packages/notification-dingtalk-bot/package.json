@@ -1,0 +1,32 @@
+{
+  "name": "@braum/plugin-notification-dingtalk-bot",
+  "version": "0.1.1",
+  "description": "dingtalk-bot notification plugin for Braum (https://github.com/yeliex/Braum)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeliex/Braum.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "trace",
+    "monitor"
+  ],
+  "author": "yeliex <yeliex@yeliex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeliex/Braum/issues"
+  },
+  "homepage": "https://github.com/yeliex/Braum#readme",
+  "dependencies": {
+    "@braum/enums": "^0.1.0",
+    "@braum/types": "^0.1.0",
+    "braum": "^0.1.1"
+  }
+}
