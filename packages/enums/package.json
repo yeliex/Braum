@@ -1,6 +1,6 @@
 {
   "name": "@braum/enums",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Braum enums (https://github.com/yeliex/Braum)",
   "types": "lib/index.d.ts",
   "main": "index.js",

@@ -1,6 +1,6 @@
 {
   "name": "braum",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "js sdk for Braum (https://github.com/yeliex/Braum)",
   "types": "index.d.ts",
   "browser": "dist/browser.js",
@@ -40,8 +40,8 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "@braum/enums": "^0.1.0",
-    "@braum/types": "^0.1.0",
+    "@braum/enums": "^0.1.2",
+    "@braum/types": "^0.1.2",
     "@yeliex/snowflake": "^0.2.0",
     "cross-fetch": "^2.2.2",
     "debug": "^3.1.0",

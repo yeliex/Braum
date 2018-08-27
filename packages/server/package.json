@@ -1,6 +1,6 @@
 {
   "name": "braum-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "braum server",
   "main": "index.js",
   "private": true,
@@ -30,11 +30,11 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "@braum/enums": "^0.1.0",
-    "@braum/types": "^0.1.0",
+    "@braum/enums": "^0.1.2",
+    "@braum/types": "^0.1.2",
     "@yeliex/snowflake": "^0.2.0",
     "bignumber.js": "^7.2.1",
-    "braum": "^0.1.1",
+    "braum": "^0.1.2",
     "debug": "^3.1.0",
     "glob": "^7.1.2",
     "http-errors": "^1.7.0",

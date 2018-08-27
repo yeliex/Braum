@@ -1,6 +1,6 @@
 {
   "name": "@braum/plugin-filter-unauthed",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "unauthed filter plugin for Braum (https://github.com/yeliex/Braum)",
   "main": "index.js",
   "scripts": {
@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/yeliex/Braum#readme",
   "dependencies": {
-    "@braum/enums": "^0.1.0",
-    "@braum/types": "^0.1.0",
-    "braum": "^0.1.1"
+    "@braum/enums": "^0.1.2",
+    "@braum/types": "^0.1.2",
+    "braum": "^0.1.2"
   }
 }

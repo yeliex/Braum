@@ -1,6 +1,6 @@
 {
   "name": "@braum/plugin",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "plugin core for Braum (https://github.com/yeliex/Braum)",
   "types": "lib/index.d.ts",
   "main": "index.js",
@@ -29,6 +29,6 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "@braum/enums": "^0.1.0"
+    "@braum/enums": "^0.1.2"
   }
 }

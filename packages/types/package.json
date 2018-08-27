@@ -1,6 +1,6 @@
 {
   "name": "@braum/types",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "types Braum (https://github.com/yeliex/Braum)",
   "types": "index.d.ts",
   "scripts": {
@@ -28,6 +28,6 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "@braum/enums": "^0.1.0"
+    "@braum/enums": "^0.1.2"
   }
 }
