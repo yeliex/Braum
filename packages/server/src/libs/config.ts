@@ -55,23 +55,32 @@ class Config {
   }
 
   private static loadFile(path: string) {
-    const fileExist = fs.statSync(path);
-    if (!fileExist) {
-      return {};
+    try {
+      const fileExist = fs.statSync(path);
+      if (!fileExist) {
+        return {};
+      }
+
+      assert(fileExist.isFile(), `config file is not a valid file: ${path}`);
+
+      const str = fs.readFileSync(path, 'utf8');
+
+      const config = safeLoad(str);
+
+      if (!config) {
+        return {};
+      }
+
+      assert(typeof config === 'object', 'config set must be object');
+
+      return config;
+    } catch (e) {
+      if (e.code === 'ENOENT') {
+        return {};
+      }
+
+      throw e;
     }
-    assert(fileExist.isFile(), `config file is not a valid file: ${path}`);
-
-    const str = fs.readFileSync(path, 'utf8');
-
-    const config = safeLoad(str);
-
-    if (!config) {
-      return {};
-    }
-
-    assert(typeof config === 'object', 'config set must be object');
-
-    return config;
   }
 
   static check(obj: Props.InputConfig): Props.Configs {
@@ -125,7 +134,7 @@ class Config {
         enumerable: true,
         get: () => {
           return (typeof value === 'object' && !Array.isArray(value)) ? this.getter(value) : value;
-        }
+        },
       };
       return total;
     }, {}));
