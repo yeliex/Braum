@@ -4,6 +4,7 @@
   "description": "data monitor service for everything, provide html and wechat app",
   "private": true,
   "scripts": {
+    "publish:image": "lerna run publish:image --stream --concurrency=1 --ignore project-braum",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
