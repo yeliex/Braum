@@ -36,7 +36,6 @@ CREATE TABLE `braum`.`span`
  `id`         BIGINT(20) unsigned NOT NULL ,
  `trace_id`   BIGINT(64) unsigned NOT NULL ,
  `parent_id`  BIGINT(20) unsigned NOT NULL ,
- `name`       VARCHAR(64) NOT NULL ,
  `utc_create` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
  `duration`   TIMESTAMP COMMENT '请求持续时间,方便快速查询' ,
 
