@@ -12,7 +12,7 @@ export default <Props.InputConfig> {
     mysql: {
       host: defaultTo(process.env.MYSQL_HOST, 'localhost'),
       port: defaultTo(process.env.MYSQL_POST, 3306),
-      db: defaultTo(process.env.MYSQL_PORT, 'braum'),
+      db: defaultTo(process.env.MYSQL_DB, 'braum'),
       user: defaultTo(process.env.MYSQL_USER, 'root'),
       password: defaultTo(process.env.MYSQL_PASSWORD, 'passwd')
     }

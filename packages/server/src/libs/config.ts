@@ -51,6 +51,8 @@ class Config {
 
     const config = new Config(_.defaultsDeep(Config.loadFile(custromConfig), DefaultConfig));
 
+    debug('[config]', config.toString());
+
     return config;
   }
 
@@ -156,6 +158,10 @@ class Config {
 
   get plugin() {
     return this.config.plugin;
+  }
+
+  toString(){
+    return JSON.stringify(this);
   }
 }
 
