@@ -60,6 +60,7 @@ export const genQuery = (query: Types.Annotation.QueryAnnotation): any => {
   return where;
 };
 
+// todo: 探索如何在span层面避免annotation重复
 export const bulkCreate = async (ctx: Context, list: CreateAnnotations): Promise<Types.Annotations> => {
   list = await serialize(ctx, list);
 

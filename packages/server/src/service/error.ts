@@ -80,6 +80,7 @@ export const genQuery = (query: Types.Error.QueryError): any => {
   return where;
 };
 
+// todo: 需要支持span异常
 export const bulkCreate = async (ctx: Context, errors: CreateErrors): Promise<Types.Errors> => {
   errors = await serializeErrors(ctx, errors);
   return ctx.db.Error.bulkCreate(errors);

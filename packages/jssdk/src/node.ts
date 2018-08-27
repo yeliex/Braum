@@ -159,6 +159,9 @@ export default class Braum extends BraumCore {
         });
 
         await next();
+
+        ctx.action.utcCreate = Date.now();
+
         braum.push(span.data);
       };
 
@@ -166,9 +169,12 @@ export default class Braum extends BraumCore {
         try {
           await next();
         } catch (error) {
-          ctx.action && ctx.action.createError(<any>{
-            error,
-          });
+          const e: any = error instanceof Error ? {error} : {
+            name: 'ResponseError',
+            message: error.message || error.error || error,
+            meta: {code: error.code || error.status},
+          };
+          ctx.action && ctx.action.createError(e);
           errorHandler(error, ctx);
         }
       };

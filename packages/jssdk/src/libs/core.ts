@@ -1,10 +1,15 @@
 import * as assert from 'assert';
-import fetch, { FetchRequest } from './fetch';
 import Snowflake from '@yeliex/snowflake';
 import { ActionTypes } from '@braum/enums';
-import Span, { SpanProps } from './instance/span';
-import { is } from './util';
 import { debounce } from 'lodash';
+import * as Debug from 'debug';
+import Span, { SpanProps } from './instance/span';
+import fetch, { FetchRequest } from './fetch';
+import { is } from './util';
+
+const debug = Debug('braum');
+
+const requestDebug = Debug('braum:request');
 
 export interface CoreProps {
   endpoint?: string;
@@ -51,20 +56,29 @@ export default abstract class Braum {
     options.headers = options.headers || {};
     options.headers['X-Trace'] = false;
 
-    const res = await fetch(path, options);
+    try {
+      const res = await fetch(path, options);
 
-    const json = await res.json();
+      if (res.status >= 400) {
+        throw new Error(res.statusText);
+      }
 
-    if (json.code && json.code < 400) {
-      return json.data;
+      const json = await res.json();
+
+      if (json.code && json.code < 400) {
+        return json.data;
+      }
+      throw new Error(json.message || json);
+    } catch (e) {
+      requestDebug(e.message);
+      return;
     }
-    return json;
   }
 
   public genFetch(parent: Span) {
     const originFetch = this.props.fetch;
     const braum = this;
-    return async function decoratedFetch(path: string, options: FetchRequest = {}) {
+    return async function decoratedFetch(path: string, options: FetchRequest = {}, ...args: any[]) {
       const span = parent.createChild(await braum.genId());
 
       const annotations: any = {
@@ -83,18 +97,41 @@ export default abstract class Braum {
         type: ActionTypes.CLIENT_SEND,
         annotations,
       });
-      const res = await (<typeof fetch>originFetch)(path, options);
 
-      span.createAction({
-        type: ActionTypes.CLIENT_RECEIVE,
-        annotations: {
-          status: res.status,
-        },
-      });
+      // todo: 需要维护fetch异常的情况, epo server需要维护不兼容的地方
+      try {
+        const res = await (<any>originFetch)(path, options, ...args);
 
-      braum.push(span.data);
+        span.createAction({
+          type: ActionTypes.CLIENT_RECEIVE,
+          annotations: {
+            status: res.status,
+          },
+        });
 
-      return res;
+        braum.push(span.data);
+
+        return res;
+      } catch (error) {
+        const e: any = error instanceof Error ? {error} : {
+          name: 'FecthError',
+          message: typeof error === 'string' && error || error.message,
+          meta: error,
+        };
+
+        const action = span.createAction({
+          type: ActionTypes.CLIENT_RECEIVE,
+          annotations: {
+            status: error.status || error.code || 500,
+          },
+        });
+
+        action.createError(e);
+
+        braum.push(span.data);
+
+        throw error;
+      }
     };
   }
 
@@ -128,10 +165,16 @@ export default abstract class Braum {
     const list = this.stack;
     this.stack = [];
 
-    await this.request('/api/spans', {
-      method: 'POST',
-      body: list,
-    });
+    debug('[SAVE START]', list.length);
+
+    if (list.length > 0) {
+      await this.request('/api/spans', {
+        method: 'POST',
+        body: list,
+      });
+
+      debug('[SAVE FINISH]');
+    }
   }
 
   private get save() {

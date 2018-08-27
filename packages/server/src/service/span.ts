@@ -50,6 +50,7 @@ export const serialize = async (ctx: Context, list: CreateSpans) => {
   return dataList;
 };
 
+// todo: 需要检查id是否已存在, 启用事物. action因为是每个服务独立的所以不需要
 export const bulkCreate = async (ctx: Context, list: CreateSpans) => {
   list = await serialize(ctx, list);
 

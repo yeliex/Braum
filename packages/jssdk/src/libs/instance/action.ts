@@ -82,6 +82,10 @@ export default class Action extends Base {
     return this.props.id;
   }
 
+  public set utcCreate(time) {
+    this.props.utcCreate = time;
+  }
+
   public get spanId() {
     return this.span.id;
   }
