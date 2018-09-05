@@ -10,21 +10,6 @@ module.exports = {
     require.resolve('babel-plugin-add-module-exports'),
     require.resolve('babel-plugin-transform-decorators-legacy'),
     require.resolve('babel-plugin-syntax-dynamic-import'),
-    [
-      require.resolve('babel-plugin-import'),
-      {
-        libraryName: 'antd',
-        libraryDirectory: 'es',
-        style: true,
-      },
-    ],
-    [
-      require.resolve('babel-plugin-import'),
-      {
-        libraryName: 'lodash',
-        libraryDirectory: '',
-        camel2DashComponentName: false,
-      },
-    ],
+
   ],
 };

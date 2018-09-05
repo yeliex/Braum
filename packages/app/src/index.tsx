@@ -1,7 +1,9 @@
+import * as antd from 'antd';
+console.log(antd.message);
+
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import './style/index.less';
-
+// import './style/index.less';
 import('./routers').then(({default: App}) => {
   ReactDom.render((
     <App />
