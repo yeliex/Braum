@@ -123,15 +123,15 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@braum/enums@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.0.1.tgz#d77765affa0af22eb0983b371de9963c40e99574"
+"@braum/enums@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.1.2.tgz#655584bab895cd5e9c9263ab57afdf483fdf6e48"
 
-"@braum/types@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.0.1.tgz#61ff86d2d7dee220d300c976ea90dffda00e6704"
+"@braum/types@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.1.2.tgz#45857f7fe9bb412cf9fc07e8cdfa9df9cb49ef64"
   dependencies:
-    "@braum/enums" "^0.0.1"
+    "@braum/enums" "^0.1.2"
 
 "@fortawesome/fontawesome-pro@^5.2.0":
   version "5.2.0"
@@ -4951,8 +4951,8 @@ path-key@^2.0.0, path-key@^2.0.1:
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
 
 path-parse@^1.0.5:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
 
 path-to-regexp@0.1.7:
   version "0.1.7"
