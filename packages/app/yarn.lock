@@ -123,15 +123,15 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@braum/enums@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.0.1.tgz#d77765affa0af22eb0983b371de9963c40e99574"
+"@braum/enums@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.1.2.tgz#655584bab895cd5e9c9263ab57afdf483fdf6e48"
 
-"@braum/types@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.0.1.tgz#61ff86d2d7dee220d300c976ea90dffda00e6704"
+"@braum/types@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.1.2.tgz#45857f7fe9bb412cf9fc07e8cdfa9df9cb49ef64"
   dependencies:
-    "@braum/enums" "^0.0.1"
+    "@braum/enums" "^0.1.2"
 
 "@fortawesome/fontawesome-pro@^5.2.0":
   version "5.2.0"
@@ -3122,10 +3122,8 @@ fmin@0.0.2:
     uglify-js "^2.6.2"
 
 follow-redirects@^1.0.0:
-  version "1.5.6"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.6.tgz#44eb4fe1981dff25e2bd86b7d4033abcdb81e965"
-  dependencies:
-    debug "^3.1.0"
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
 
 for-each@~0.3.3:
   version "0.3.3"
