@@ -123,15 +123,15 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@braum/enums@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.0.1.tgz#d77765affa0af22eb0983b371de9963c40e99574"
+"@braum/enums@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.1.2.tgz#655584bab895cd5e9c9263ab57afdf483fdf6e48"
 
-"@braum/types@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.0.1.tgz#61ff86d2d7dee220d300c976ea90dffda00e6704"
+"@braum/types@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.1.2.tgz#45857f7fe9bb412cf9fc07e8cdfa9df9cb49ef64"
   dependencies:
-    "@braum/enums" "^0.0.1"
+    "@braum/enums" "^0.1.2"
 
 "@fortawesome/fontawesome-pro@^5.2.0":
   version "5.2.0"
@@ -4144,8 +4144,8 @@ lodash-decorators@^6.0.0:
     tslib "^1.9.2"
 
 lodash-es@^4.17.5, lodash-es@^4.2.1:
-  version "4.17.10"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.10.tgz#62cd7104cdf5dd87f235a837f0ede0e8e5117e05"
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
 
 lodash._getnative@^3.0.0:
   version "3.9.1"
