@@ -123,15 +123,15 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@braum/enums@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.0.1.tgz#d77765affa0af22eb0983b371de9963c40e99574"
+"@braum/enums@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/enums/-/enums-0.1.2.tgz#655584bab895cd5e9c9263ab57afdf483fdf6e48"
 
-"@braum/types@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.0.1.tgz#61ff86d2d7dee220d300c976ea90dffda00e6704"
+"@braum/types@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@braum/types/-/types-0.1.2.tgz#45857f7fe9bb412cf9fc07e8cdfa9df9cb49ef64"
   dependencies:
-    "@braum/enums" "^0.0.1"
+    "@braum/enums" "^0.1.2"
 
 "@fortawesome/fontawesome-pro@^5.2.0":
   version "5.2.0"
@@ -4471,8 +4471,8 @@ mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
     minimist "0.0.8"
 
 moment@2.x, moment@^2.19.3:
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
